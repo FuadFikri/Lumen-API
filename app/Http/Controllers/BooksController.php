@@ -28,11 +28,21 @@ class BooksController extends Controller
 
         $response=[
             'status'=>'success',
-            'data'=>$book,
+            'message'=>'book created',
         ];
 
         return response()->json($response, 200);
+    }
 
-        
+    public function index(){
+        $books = Book::all();
+
+        $response=[
+            'status'=>'success',
+            'message'=>'books list',
+            'data' => $books,
+        ];
+
+        return response()->json($response, 200);
     }
 }
