@@ -67,4 +67,23 @@ class BooksController extends Controller
         ];
         return response()->json($response, 200);
     }
+
+    public function update(Request $request, $id)
+    {
+        $book = Book::findOrFail($id);
+        // $book['title']= $request->input('title');
+        // $book->year= $request->input('year');
+        // $book->author= $request->input('author');
+        // $book->city = $request->input('city');
+        // $book->publisher = $request->input('publisher');
+        // $book->save();
+
+         $response=[
+            'status'=>'success',
+            'message' => 'updated',
+            'data' =>$request,
+        ];
+        return response()->json($response, 200);
+
+    }
 }

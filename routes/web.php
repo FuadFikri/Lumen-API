@@ -25,4 +25,5 @@ $router->get('/','BooksController@index');
 $router->post('/create','BooksController@create');
 $router->get('/book/{id}','BooksController@show');
 $router->delete('/book/{id}','BooksController@delete');
+$router->put('/book/{id}','BooksController@update');
 
