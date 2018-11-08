@@ -56,4 +56,15 @@ class BooksController extends Controller
         ];
         return response()->json($response, 200);
     }
+
+    public function delete($id)
+    {
+        $book = Book::find($id);
+        $book->delete();
+        $response=[
+            'status'=>'success',
+            'message' => 'deleted',
+        ];
+        return response()->json($response, 200);
+    }
 }
