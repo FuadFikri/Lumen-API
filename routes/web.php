@@ -19,3 +19,5 @@ $router->get('/key', function(){
     $key = str_random(32);
     return $key;
 });
+
+$router->post('/create','BooksController@create');
