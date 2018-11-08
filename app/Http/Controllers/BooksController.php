@@ -34,7 +34,8 @@ class BooksController extends Controller
         return response()->json($response, 200);
     }
 
-    public function index(){
+    public function index()
+    {
         $books = Book::all();
 
         $response=[
@@ -43,6 +44,16 @@ class BooksController extends Controller
             'data' => $books,
         ];
 
+        return response()->json($response, 200);
+    }
+
+    public function show($id)
+    {
+        $book = Book::find($id);
+        $response=[
+            'status'=>'success',
+            'data' => $book,
+        ];
         return response()->json($response, 200);
     }
 }

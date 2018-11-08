@@ -20,5 +20,8 @@ $router->get('/key', function(){
     return $key;
 });
 
-$router->post('/create','BooksController@create');
+
 $router->get('/','BooksController@index');
+$router->post('/create','BooksController@create');
+$router->get('/book/{id}','BooksController@show');
+
