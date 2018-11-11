@@ -14,9 +14,11 @@ $router->get('/key', function(){
 
 $router->post('/register','AuthController@register');
 $router->post('/login','AuthController@login');
+$router->get('/','BooksController@index');
+$router->get('/users','UserController@index');
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
-    $router->get('/','BooksController@index');
+    
     $router->post('/create','BooksController@create');
     $router->get('/book/{id}','BooksController@show');
     $router->delete('/book/{id}','BooksController@delete');
