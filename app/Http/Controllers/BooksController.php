@@ -56,12 +56,14 @@ class BooksController extends Controller
     public function delete($id)
     {
         $book = Book::findOrFail($id);
-        $book->delete();
-        $response=[
-            'status'=>'success',
-            'message' => 'deleted',
-        ];
+        if($book){
+            $book->delete();
+            $response=[
+                'status'=>'success',
+                'message' => 'deleted',
+             ];
         return response()->json($response, 200);
+        }
     }
 
     public function update(Request $request, $id)
