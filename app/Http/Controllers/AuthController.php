@@ -36,7 +36,7 @@ class AuthController extends Controller
                 'status' => false,
                 'message' => 'Register Fail',
                 'data' => ''
-            ],401);
+            ],400);
         }
     }
 
