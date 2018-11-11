@@ -6,11 +6,7 @@ use App\Book;
 
 class BooksController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+  
     public function __construct()
     {
         //
@@ -49,7 +45,7 @@ class BooksController extends Controller
 
     public function show($id)
     {
-        $book = Book::find($id);
+        $book = Book::findOrFail($id);
         $response=[
             'status'=>'success',
             'data' => $book,
@@ -59,7 +55,7 @@ class BooksController extends Controller
 
     public function delete($id)
     {
-        $book = Book::find($id);
+        $book = Book::findOrFail($id);
         $book->delete();
         $response=[
             'status'=>'success',
