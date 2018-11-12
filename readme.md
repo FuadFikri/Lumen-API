@@ -1,9 +1,13 @@
 # Simple Lumen REST API 
  
-## Without Authentication
+### Without Authentication
+
+
 GET
 + https://tugasharisenin.herokuapp.com
 + https://tugasharisenin.herokuapp.com/users
+
+
 
 POST
 + https://tugasharisenin.herokuapp.com/register
@@ -16,7 +20,8 @@ POST
   - password
   
   
- ## Need Authentication
+ ### Need Authentication
+
 
 create (POST)
   + https://tugasharisenin.herokuapp.com/create
@@ -25,6 +30,7 @@ create (POST)
     - author
     - city
     - publisher
+
 
 show, update, delete (GET, PUT,DELETE)
   + https://tugasharisenin.herokuapp.com/book/{id}
