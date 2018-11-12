@@ -9,7 +9,7 @@ POST
 + https://tugasharisenin.herokuapp.com/login
 
 
-create 9(POST)
+create (POST)
   - https://tugasharisenin.herokuapp.com/create
 
 show, update, delete (GET, PUT,DELETE)
