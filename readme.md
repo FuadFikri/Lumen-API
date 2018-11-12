@@ -1,14 +1,17 @@
 # Simple Lumen REST API 
 
+GET
 + https://tugasharisenin.herokuapp.com
-
-+ https://tugasharisenin.herokuapp.com/register
-+ https://tugasharisenin.herokuapp.com/login
 + https://tugasharisenin.herokuapp.com/users
 
-create
+POST
++ https://tugasharisenin.herokuapp.com/register
++ https://tugasharisenin.herokuapp.com/login
+
+
+create 9(POST)
   - https://tugasharisenin.herokuapp.com/create
 
-show, update, delete
+show, update, delete (GET, PUT,DELETE)
   - https://tugasharisenin.herokuapp.com/book/{id}
 
